@@ -22,7 +22,7 @@ object ApiClient {
         httpClient.addInterceptor(interceptor())
 
         val retrofit: Retrofit = builder.client(httpClient.build()).build()
-        serviceApiInterface == retrofit.create(
+        serviceApiInterface = retrofit.create(
             ServiceApiInterface::class.java
         )
 
